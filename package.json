@@ -7,6 +7,7 @@
     "format:fix": "find ./ -iname \"*.typ\" | xargs typstfmt",
     "typos:check": "typos",
     "typos:fix": "typos -w",
+    "clean": "find ./  -iname \"*.pdf\" | xargs rm",
     "prepare": "husky",
     "install": "./prepare.sh",
     "build": "typst compile main.typ --font-path ./assets/fonts/"
