@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "husky": "^9.0.11"
+  },
+  "scripts": {
+    "format:check": "find ./ -iname \"*.typ\" | xargs typstfmt --check --verbose",
+    "format:fix": "find ./ -iname \"*.typ\" | xargs typstfmt",
+    "typos:check": "typos",
+    "typos:fix": "typos -w",
+    "prepare": "husky",
+    "install": "./prepare.sh",
+    "build": "typst compile main.typ --font-path ./assets/fonts/"
+  }
+}
