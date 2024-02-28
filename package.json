@@ -3,8 +3,9 @@
     "husky": "^9.0.11"
   },
   "scripts": {
-    "format:check": "find ./ -iname \"*.typ\" | xargs typstfmt --check --verbose",
-    "format:fix": "find ./ -iname \"*.typ\" | xargs typstfmt",
+    "format:find": "cat .fmtignore | grep -v \"^#\" | xargs -I {} echo -n \"-e \\\"{}\\\" \" | xargs -I {} sh -c \"find ./ -iname \\\"*.typ\\\" | grep -v {}\"",
+    "format:check": "npm run format:find | xargs typstfmt --check --verbose",
+    "format:fix": "npm run format:find | xargs typstfmt",
     "typos:check": "typos",
     "typos:fix": "typos -w",
     "clean": "find ./  -iname \"*.pdf\" | xargs rm",
