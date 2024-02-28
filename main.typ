@@ -1,12 +1,13 @@
-#import "/packages.typ": notebookinator
+#import "/packages.typ": notebookinator, codly
 #import notebookinator: *
+#import codly: *
 #import themes.radial: radial-theme, components
 
 #show: notebook.with(theme: radial-theme, cover: align(center)[
   #text(size: 24pt, font: "Tele-Marines")[
     #v(3em)
     #text(size: 28pt)[
-      Second Notebook
+      Code Notebook
     ]
 
     #image("./assets/781X-logo.png", height: 60%)
@@ -16,7 +17,7 @@
     Over Under
 
   ]
-])
+], team-name: "781X")
 
 #create-frontmatter-entry(title: "Table of Contents")[
   #components.toc()
