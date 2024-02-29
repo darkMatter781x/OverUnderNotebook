@@ -7,7 +7,7 @@
   #text(size: 24pt, font: "Tele-Marines")[
     #v(3em)
     #text(size: 28pt)[
-      Code Notebook
+      Code Notebook | 781X
     ]
 
     #image("./assets/781X-logo.png", height: 60%)
