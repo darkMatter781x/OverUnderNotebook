@@ -4,8 +4,8 @@
   },
   "scripts": {
     "format:find": "cat .fmtignore | grep -v \"^#\" | xargs -I {} echo -n \"-e \\\"{}\\\" \" | xargs -I {} sh -c \"find ./ -iname \\\"*.typ\\\" | grep -v {}\"",
-    "format:check": "npm run format:find | xargs typstfmt --check --verbose",
-    "format:fix": "npm run format:find | xargs typstfmt",
+    "format:check": "./scripts/format-check.sh",
+    "format:fix": "./scripts/format-fix.sh",
     "typos:check": "typos",
     "typos:fix": "typos -w",
     "clean": "find ./  -iname \"*.pdf\" | xargs rm",
