@@ -96,38 +96,40 @@ now let's look at some code:
     the lift. But, when using double presses for different subsystems this may cause
     problems unwanted behavior.
   ]
+// typstfmt::off
   ```cpp
-                const bool up = Robot::control.get_digital(pros::E_CONTROLLER_DIGITAL_UP);
-                  const bool down =
-                      Robot::control.get_digital(pros::E_CONTROLLER_DIGITAL_DOWN);
+const bool up = Robot::control.get_digital(pros::E_CONTROLLER_DIGITAL_UP);
+const bool down =
+    Robot::control.get_digital(pros::E_CONTROLLER_DIGITAL_DOWN);
 
-                  // lift granular control
-                  // change the goal position of the lift by the liftIncrement
-                  Robot::Subsystems::lift->changeTarget(
-                      liftIncrement *
-                      (up - down) // ensures that if up and down are both pressed, then nothing happens
-                  );
+// lift granular control
+// change the goal position of the lift by the liftIncrement
+Robot::Subsystems::lift->changeTarget(
+    liftIncrement *
+    (up - down) // ensures that if up and down are both pressed, then nothing happens
+);
 
-                  // lift max/min angle
-                  // on the rising edge of up, if up was pressed recently,
-                  // then set target to max angle
-                  if (up && !prevUp &&
-                      pros::millis() - lastUpPress < maxTimeBetweenDoublePress)
-                    Robot::Subsystems::lift->setTarget(LiftArmStateMachine::maxAngle);
-                  // on the rising edge of down, if down was pressed recently,
-                  // then set target to max angle
-                  if (down && !prevDown &&
-                      pros::millis() - lastDownPress < maxTimeBetweenDoublePress)
-                    Robot::Subsystems::lift->setTarget(LiftArmStateMachine::minAngle);
+// lift max/min angle
+// on the rising edge of up, if up was pressed recently,
+// then set target to max angle
+if (up && !prevUp &&
+    pros::millis() - lastUpPress < maxTimeBetweenDoublePress)
+  Robot::Subsystems::lift->setTarget(LiftArmStateMachine::maxAngle);
+// on the rising edge of down, if down was pressed recently,
+// then set target to max angle
+if (down && !prevDown &&
+    pros::millis() - lastDownPress < maxTimeBetweenDoublePress)
+  Robot::Subsystems::lift->setTarget(LiftArmStateMachine::minAngle);
 
-                  // on falling edge of up & down, update the last press time
-                  if (!up && prevUp) lastUpPress = pros::millis();
-                  if (!down && prevDown) lastDownPress = pros::millis();
+// on falling edge of up & down, update the last press time
+if (!up && prevUp) lastUpPress = pros::millis();
+if (!down && prevDown) lastDownPress = pros::millis();
 
-                  // update previous values of up and down
-                  prevUp = up;
-                  prevDown = down;
-                ```
+// update previous values of up and down
+prevUp = up;
+prevDown = down;
+```
+// typstfmt::on
 - Toggles: Wings / Blocker / Automatic Catapult firing ```cpp
    // wings toggle
    // retrieve the value of the R2 button
