@@ -9,7 +9,7 @@
 #show: create-body-entry.with(
   title: "Decide: Structure",
   type: "decide",
-  date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
+  date: datetime(year: 2024, month: 1, day: 6),
   author: "Andrew Curtis",
 )
 

@@ -8,7 +8,7 @@
 #show: create-body-entry.with(
   title: "Program: Boomerang",
   type: "program",
-  date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
+  date: datetime(year: 2024, month: 2, day: 28),
   author: "Andrew Curtis",
 )
 

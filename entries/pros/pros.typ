@@ -8,7 +8,7 @@
 #show: create-body-entry.with(
   title: "Decide: PROS",
   type: "decide",
-  date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
+  date: datetime(year: 2024, month: 1, day: 15),
   author: "Andrew Curtis",
 )
 
