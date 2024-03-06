@@ -1,5 +1,7 @@
 #include "./structure/structure.typ"
 
+#include "./versioning/versioning.typ"
+
 #include "./pros/pros.typ"
 
 #include "./driver/driver.typ"
