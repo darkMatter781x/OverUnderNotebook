@@ -6,7 +6,7 @@
 #import codetastic: qrcode
 
 #show: create-body-entry.with(
-  title: "Program: Driver Control",
+  title: "Program: Driver Control Code",
   type: "program",
   date: datetime(year: 2024, month: 1, day: 15),
   author: "Andrew Curtis",
