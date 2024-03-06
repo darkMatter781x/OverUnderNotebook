@@ -9,4 +9,4 @@ cargo install typos-cli
 
 # add fonts
 sudo mkdir /usr/share/fonts/truetype/telemarines
-sudo cp -R ./assets/fonts /usr/share/fonts/truetype/telemrines
+sudo cp -R ./assets/fonts /usr/share/fonts/truetype
