@@ -60,7 +60,7 @@ curve between them.
     spacing: 2mm, // space between contents
     {
       set align(horizon)
-      box(image("./cubic-bezier.svg", width: 80%), height: 10%, clip: true)
+      box(image("./cubic-Bézier.svg", width: 70%), height: 37%, clip: true)
     },
     {
       set align(horizon)
@@ -73,6 +73,6 @@ curve between them.
     },
   ),
   caption: [
-    A cubic bezier
+    A cubic Bézier
   ],
 )
