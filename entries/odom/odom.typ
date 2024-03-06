@@ -6,8 +6,8 @@
 #import "/util.typ": qrlink
 
 #show: create-body-entry.with(
-  title: "Program: Odometry",
-  type: "program",
+  title: "Concept: Odometry",
+  type: "concept",
   date: datetime(year: 2024, month: 1, day: 15),
   author: "Andrew Curtis",
 )
