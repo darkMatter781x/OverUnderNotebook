@@ -10,6 +10,8 @@
 
 #include "./boomerang/boomerang.typ"
 
-#include "./pure_pursuit/pure_pursuit.typ"
-
 #include "./auton/auton.typ"
+
+#include "./catapult/catapult.typ"
+
+#include "./pure_pursuit/pure_pursuit.typ"
