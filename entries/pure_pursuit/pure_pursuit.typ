@@ -105,6 +105,11 @@ output is expected to be 90% $a$ and 10% $b$.
 #grid(
   columns: 2,
   gutter: 2mm,
+  figure({
+    image("./quadratic.png", width: 100%)
+  }, caption: [
+    A quadratic Bézier curve. $t$ is represented by color
+  ]),
   [
     Hey thats not a curve, thats a line!! Well, yes, but this is the simplest form
     of a Bézier curve, but we can make it more interesting by adding more points. We
@@ -112,13 +117,43 @@ output is expected to be 90% $a$ and 10% $b$.
     make two lerps, one between $a$ and $b$, and one between $b$ and $c$. We then
     take a lerp between these two curves to form our quadratic Bézier curve.
   ],
-  figure({
-    image("./lerp.png", width: 100%)
-  }, caption: [
-    A linear Bézier curve. $t$ is represented by color
-  ]),
 )
+== Recursive Bézier
+OK, but what if we want to make a Bézier curve with more than 3 points? Well, we
+can form a recursive process to create n-degree Bézier. In our quadratic
+(2-degree) Bézier example, we took two linear Béziers (1-degree) and lerped
+between them. We can do the same thing for a cubic (3-degree) Bézier, but
+instead of lerping between two linear Béziers (1), we lerp between two quadratic
+Béziers(2).
 
-=== Tooling
-To easily create and visualize our paths and put them into a machine readable
-format, we use #link("path.jerryio.com").
+Hopefully this helps you to see how a general recursive n-Bézier curve can be
+formed. But, just to drive the point home, to create a n-degree Bézier curve, we
+take two (n-1)-degree Bézier curves and lerp between them. And if you have a
+0-degree Bézier curve, you just have a point.
+
+= Tooling
+#grid(
+  columns: 2,
+  gutter: 2mm,
+  [
+    Now we have a way to form a curve, but we don't wanna manually generate each
+    path. Luckily we have amazing tooling like #link("path.jerryio.com"). This tool
+    allows us to visualize, create, and modify a path. This path is then exported as
+    a list of points which we can then put in our code. What is this path formed by?
+    Splines!
+
+    Splines are simply just multiple Bézier curves put together. There's many
+    special types of splines, but thats another subject that we will not be getting
+    into. In the case of #link("path.jerryio.com"), we use cubic Bézier curves and
+    lines/linear Bézier curves to form the spline.
+  ],
+  figure(
+    {
+      image("./path.jerryio.png", width: 100%)
+    },
+    caption: [
+      A screenshot of path.jerryio.com showing a path for an old six ball. The intent
+      of this path is to remove the triball in the matchload zone.
+    ],
+  ),
+)
