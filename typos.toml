@@ -4,3 +4,4 @@ extend-exclude = ["*.md"]
 [default.extend-words]
 Pilons = "Pilons"
 Bezier = "Bézier"
+Hass = "Hass"

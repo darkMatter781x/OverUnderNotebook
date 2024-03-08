@@ -82,7 +82,7 @@ This notebook contains:
   ),
   [
     = Inspiration
-    A lot of this notebook's formatting was inspired by Felix Hash of 53E's
+    A lot of this notebook's formatting was inspired by Felix Hass of 53E's
     notebook, which served as a great example of how to use _The Notebookinator_. He
     was also very willing to answer any questions we had about the notebook, and we
     are very grateful for his help.
