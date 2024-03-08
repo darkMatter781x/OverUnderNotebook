@@ -1,3 +1,5 @@
+#include "./intro/intro.typ"
+
 #include "./structure/structure.typ"
 
 #include "./versioning/versioning.typ"
