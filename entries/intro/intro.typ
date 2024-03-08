@@ -9,7 +9,7 @@
 #show: create-body-entry.with(
   title: "Introduction",
   type: "notebook",
-  date: datetime(year: 2024, month: 1, day: 15),
+  date: datetime(year: 1, month: 1, day: 1),
   author: "Andrew Curtis",
 )
 
