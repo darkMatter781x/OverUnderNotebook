@@ -28,7 +28,10 @@ You'll notice that each commit has a weird commit message. This is a convention
 that we use to keep our commits organized and visually grepable. We use a mix of
 conventional commits and gitmoji to create this convention: ```
 <type>: <gitmoji> <description>
-```= GitHub GitHub is a web-based platform that hosts Git repositories. It
+```//typstfmt::off
+= GitHub
+//typstfmt::on
+GitHub is a web-based platform that hosts Git repositories. It
 allows for collaboration and sharing of code between team members. It also
 enables us to easily open source our code so that other teams can use it as a
 reference. You can see our git repository here:

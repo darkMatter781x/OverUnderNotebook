@@ -131,11 +131,11 @@ formed. But, just to drive the point home, to create a n-degree Bézier curve, w
 take two (n-1)-degree Bézier curves and lerp between them. And if you have a
 0-degree Bézier curve, you just have a point.
 
-= Tooling
 #grid(
   columns: 2,
   gutter: 2mm,
   [
+    = Tooling
     Now we have a way to form a curve, but we don't wanna manually generate each
     path. Luckily we have amazing tooling like #link("path.jerryio.com"). This tool
     allows us to visualize, create, and modify a path. This path is then exported as
@@ -149,7 +149,7 @@ take two (n-1)-degree Bézier curves and lerp between them. And if you have a
   ],
   figure(
     {
-      image("./path.jerryio.png", width: 100%)
+      image("./path.jerryio.png", width: 80%)
     },
     caption: [
       A screenshot of path.jerryio.com showing a path for an old six ball. The intent
