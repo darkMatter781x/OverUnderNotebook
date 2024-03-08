@@ -2,3 +2,4 @@
 #include "./far-awp/far-awp.typ"
 #include "./disrupt/disrupt.typ"
 #include "./skills/skills.typ"
+#include "./pre-skills/pre-skills.typ"

@@ -5,7 +5,14 @@
 
 #import "/util.typ": qrlink
 
-#let auton(title, date, filename, description, body) = {
+#let auton(
+  title,
+  date,
+  filename,
+  description,
+  directory: "src/auton/autons/",
+  body,
+) = {
   show: create-body-entry.with(
     title: "Auton: " + title,
     type: "program",
@@ -24,7 +31,7 @@
       set align(horizon)
       figure(
         qrlink(
-          "https://github.com/meiszwflz/OverUnder781X/tree/master/src/auton/autons/" + filename,
+          "https://github.com/meiszwflz/OverUnder781X/tree/master/" + dictionary + filename,
           width: 9em,
         ),
         caption: "Source Code on Github",
