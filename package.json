@@ -12,6 +12,6 @@
     "prepare": "husky",
     "install": "./prepare.sh",
     "build": "typst compile main.typ --font-path ./assets/fonts/",
-    "watch": "typst-live main.typ"
+    "watch": "rm -f output.pdf; typst-live main.typ"
   }
 }
