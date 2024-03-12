@@ -1,6 +1,5 @@
 .direnv
 *.pdf
 result
-.devcontainer
 notebookinator
 node_modules
