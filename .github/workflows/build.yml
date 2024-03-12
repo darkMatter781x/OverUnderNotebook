@@ -13,6 +13,8 @@ jobs:
 
       - name: Setup Typst
         uses: typst-community/setup-typst@v3.1.0
+        with:
+          typst-version: 0.10.0
 
       - name: Setup just
         uses: extractions/setup-just@v2
