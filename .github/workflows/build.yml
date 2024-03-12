@@ -23,7 +23,7 @@ jobs:
       - name: Clone Notebookinator
         uses: actions/checkout@v4
         with:
-          repository: battlech1cken/notebookinator
+          repository: darkMatter781x/notebookinator
           path: ./notebookinator
           ref: main
       - name: Install Notebookinator
