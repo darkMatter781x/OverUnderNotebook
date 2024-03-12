@@ -14,9 +14,7 @@ angle towards the goal.
 Another feature is that if at any time the driver moves the joysticks or press a
 button, then the macro will exit and the driver control will take over. This is
 implemented with the// typstfmt::off
-```cpp checkDriverExit()```, ```cpp
-betterIsMotionRunning()```, ```cpp betterWaitUntilDone()```, and ```cpp
-exitBecauseDriver()```
+```cpp checkDriverExit()```, ```cpp betterIsMotionRunning()```, ```cpp betterWaitUntilDone()```, and ```cpp exitBecauseDriver()```
 // typstfmt::on
 functions.
   ],
