@@ -5,7 +5,7 @@
   datetime(year: 2024, month: 2, day: 25),
   "skills.cpp",
   [
-    This code attempts to score as many points as possible in the 60-second skils
+    This code attempts to score as many points as possible in the 60-second skills
     period. We do this by first matchloading, then crossing under the elevation bar
     to make 2 rams into the right side of the goal. Then we go around the center
     triballs and make 2 rams into the front side of the goal. Next, we sweep the

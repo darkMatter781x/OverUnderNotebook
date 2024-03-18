@@ -129,7 +129,7 @@ class LiftArmStateMachine {
  STATE state = IDLE;
 };
 ``` ```cpp
-// src/subsytstems/lift.cpp
+// src/subsystems/lift.cpp
 // construct the lift arm state machine
 LiftArmStateMachine::LiftArmStateMachine(pros::ADIDigitalOut* retract,
  pros::ADIDigitalOut* extend)
